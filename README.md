@@ -1,5 +1,136 @@
-# Example Package
+# ToneTint
 
-This is a simple example package. You can use
-[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+# SentimentVisualizer
+
+[![PyPI version](https://badge.fury.io/py/SentimentVisualizer.svg)](https://badge.fury.io/py/SentimentVisualizer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**SentimentVisualizer** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Basic Example](#basic-example)
+  - [Customization](#customization)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Sentiment Analysis**: Uses pre-trained models to analyze the sentiment of text chunks.
+- **Color-Coded Visualization**: Highlights text with colors representing positive, negative, or neutral sentiments.
+- **Opacity Adjustment**: Adjusts the opacity of the highlight based on the confidence score of the sentiment prediction.
+- **Interactive Tooltips**: Displays sentiment labels and scores when hovering over text chunks.
+- **Customizable Colors**: Allows customization of highlight colors for different sentiments.
+- **Flexible Text Chunking**: Splits text into sentences and further into chunks of specified sizes for detailed analysis.
+
+## Installation
+
+You can install **SentimentVisualizer** via pip:
+
+```bash
+pip install SentimentVisualizer
+```
+
+Alternatively, you can clone the repository and install it manually:
+
+```bash
+git clone https://github.com/yourusername/SentimentVisualizer.git
+cd SentimentVisualizer
+python setup.py install
+```
+
+## Usage
+
+### Basic Example
+
+```python
+from SentimentVisualizer import SentimentVisualizer
+
+# Initialize the visualizer
+visualizer = SentimentVisualizer()
+
+# Your input text
+text = "I love sunny days. However, I hate the rain. The weather today is okay."
+
+# Display the sentiment visualization
+visualizer.display(text)
+```
+
+This code will display your text with:
+
+- Positive sentiments highlighted in green.
+- Negative sentiments highlighted in red.
+- Neutral sentiments highlighted in yellow.
+
+Hovering over each text chunk will show a tooltip with the sentiment label and confidence score.
+
+### Customization
+
+**Customizing Highlight Colors**
+
+You can specify custom colors for positive, negative, and neutral sentiments by passing a dictionary to the `SentimentVisualizer` constructor:
+
+```python
+custom_colors = {
+    'POS': '#558968',  # Your custom green color
+    'NEG': '#aa485b',  # Your custom red color
+    'NEU': '#fbeab5'   # Your custom yellow color
+}
+
+visualizer = SentimentVisualizer(colors=custom_colors)
+```
+
+**Adjusting Chunk Size**
+
+You can adjust the chunk size (number of words per chunk) for more granular or broader analysis:
+
+```python
+visualizer = SentimentVisualizer(chunk_size=10)
+```
+
+**Using a Different Model**
+
+You can specify a different pre-trained model for sentiment analysis:
+
+```python
+visualizer = SentimentVisualizer(model_name='nlptown/bert-base-multilingual-uncased-sentiment')
+```
+
+## Dependencies
+
+- **Python 3.6 or higher**
+- **Transformers**: For using pre-trained sentiment analysis models.
+- **NLTK**: For text tokenization.
+- **IPython**: For displaying HTML in Jupyter notebooks.
+- **Torch**: Required by some Transformer models.
+- **SentencePiece**: For certain tokenizer models.
+
+You can install the dependencies via pip:
+
+```bash
+pip install transformers nltk ipython torch sentencepiece
+```
+
+## Contributing
+
+Contributions are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+Please ensure your code adheres to the existing style conventions and that all tests pass.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Disclaimer**: This package uses pre-trained models from Hugging Face's Transformers library. The performance and accuracy of sentiment analysis depend on the chosen model. Always verify the outputs, especially when used for critical applications.
