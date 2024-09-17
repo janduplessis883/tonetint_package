@@ -1,11 +1,9 @@
 # ToneTint
 
-# SentimentVisualizer
-
-[![PyPI version](https://badge.fury.io/py/SentimentVisualizer.svg)](https://badge.fury.io/py/SentimentVisualizer)
+[![PyPI version](https://badge.fury.io/py/ToneTint.svg)](https://badge.fury.io/py/ToneTint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**SentimentVisualizer** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
+**ToneTint** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
 
 ## Table of Contents
 
@@ -29,17 +27,17 @@
 
 ## Installation
 
-You can install **SentimentVisualizer** via pip:
+You can install **ToneTint** via pip:
 
 ```bash
-pip install SentimentVisualizer
+pip install ToneTint
 ```
 
 Alternatively, you can clone the repository and install it manually:
 
 ```bash
-git clone https://github.com/yourusername/SentimentVisualizer.git
-cd SentimentVisualizer
+git clone https://github.com/yourusername/ToneTint.git
+cd ToneTint
 python setup.py install
 ```
 
@@ -48,10 +46,10 @@ python setup.py install
 ### Basic Example
 
 ```python
-from SentimentVisualizer import SentimentVisualizer
+from ToneTint import ToneTint
 
 # Initialize the visualizer
-visualizer = SentimentVisualizer()
+visualizer = ToneTint()
 
 # Your input text
 text = "I love sunny days. However, I hate the rain. The weather today is okay."
@@ -62,9 +60,9 @@ visualizer.display(text)
 
 This code will display your text with:
 
-- Positive sentiments highlighted in green.
-- Negative sentiments highlighted in red.
-- Neutral sentiments highlighted in yellow.
+- **Positive sentiments** highlighted in green.
+- **Negative sentiments** highlighted in red.
+- **Neutral sentiments** highlighted in yellow.
 
 Hovering over each text chunk will show a tooltip with the sentiment label and confidence score.
 
@@ -72,7 +70,7 @@ Hovering over each text chunk will show a tooltip with the sentiment label and c
 
 **Customizing Highlight Colors**
 
-You can specify custom colors for positive, negative, and neutral sentiments by passing a dictionary to the `SentimentVisualizer` constructor:
+You can specify custom colors for positive, negative, and neutral sentiments by passing a dictionary to the `ToneTint` constructor:
 
 ```python
 custom_colors = {
@@ -81,7 +79,7 @@ custom_colors = {
     'NEU': '#fbeab5'   # Your custom yellow color
 }
 
-visualizer = SentimentVisualizer(colors=custom_colors)
+visualizer = ToneTint(colors=custom_colors)
 ```
 
 **Adjusting Chunk Size**
@@ -89,7 +87,7 @@ visualizer = SentimentVisualizer(colors=custom_colors)
 You can adjust the chunk size (number of words per chunk) for more granular or broader analysis:
 
 ```python
-visualizer = SentimentVisualizer(chunk_size=10)
+visualizer = ToneTint(chunk_size=10)
 ```
 
 **Using a Different Model**
@@ -97,7 +95,7 @@ visualizer = SentimentVisualizer(chunk_size=10)
 You can specify a different pre-trained model for sentiment analysis:
 
 ```python
-visualizer = SentimentVisualizer(model_name='nlptown/bert-base-multilingual-uncased-sentiment')
+visualizer = ToneTint(model_name='nlptown/bert-base-multilingual-uncased-sentiment')
 ```
 
 ## Dependencies
@@ -119,11 +117,11 @@ pip install transformers nltk ipython torch sentencepiece
 
 Contributions are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
 
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
+1. **Fork** the repository.
+2. **Create** your feature branch (`git checkout -b feature/YourFeature`).
+3. **Commit** your changes (`git commit -am 'Add some feature'`).
+4. **Push** to the branch (`git push origin feature/YourFeature`).
+5. **Open** a pull request.
 
 Please ensure your code adheres to the existing style conventions and that all tests pass.
 
