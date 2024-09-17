@@ -5,7 +5,7 @@
 
 > **ToneTint** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
 
-![images](images/text.png)
+![images](https://github.com/janduplessis883/tonetint_package/raw/master/images/pip.png)
 
 ## Table of Contents
 
