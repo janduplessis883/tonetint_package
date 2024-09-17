@@ -6,17 +6,24 @@ build-backend = "hatchling.build"
 name = "tonetint"
 version = "0.0.1"
 authors = [
-  { name="Jan du Plessis", email="drjanduplessis@icloud.com" },
+  { name = "Jan du Plessis", email = "drjanduplessis@icloud.com" },
 ]
-description = "A small package to perform sentiment analysis on text and display."
+description = "ToneTint is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "transformers",
+  "nltk",
+  "ipython",
+  "torch",
+  "sentencepiece",
 ]
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
-Issues = "https://github.com/pypa/sampleproject/issues"
+Homepage = "https://github.com/janduplessis883/tonetint_package"
+Issues = "https://github.com/janduplessis883/tonetint_package/issues"
