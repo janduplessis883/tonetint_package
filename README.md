@@ -30,14 +30,14 @@
 You can install **ToneTint** via pip:
 
 ```bash
-pip install ToneTint
+pip install tonetint
 ```
 
 Alternatively, you can clone the repository and install it manually:
 
 ```bash
-git clone https://github.com/yourusername/ToneTint.git
-cd ToneTint
+git clone https://github.com/janduplessis883/tonetint_package.git
+cd tonetint_package
 python setup.py install
 ```
 
@@ -46,7 +46,7 @@ python setup.py install
 ### Basic Example
 
 ```python
-from ToneTint import ToneTint
+from tonetint import ToneTint
 
 # Initialize the visualizer
 visualizer = ToneTint()
