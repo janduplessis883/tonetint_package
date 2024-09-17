@@ -20,9 +20,9 @@ class ToneTint:
 
         # Default colors if not provided
         default_colors = {
-            "POS": "#558968",  # Green
-            "NEG": "#aa485b",  # Red
-            "NEU": "#fbeab5",  # Yellow
+            "POS": "#aec867",  # Green
+            "NEG": "#e8a56c",  # Red
+            "NEU": "#f0e8d2",  # Yellow
         }
         self.colors = colors if colors else default_colors
 
@@ -72,11 +72,11 @@ class ToneTint:
         """
         label_upper = label.upper()
         if label_upper in ["POSITIVE", "POS"]:
-            color_hex = self.colors.get("POS", "#558968")  # Default to green
+            color_hex = self.colors.get("POS", "#aec867")  # Default to green
         elif label_upper in ["NEGATIVE", "NEG"]:
-            color_hex = self.colors.get("NEG", "#aa485b")  # Default to red
+            color_hex = self.colors.get("NEG", "#e8a56c")  # Default to red
         elif label_upper in ["NEUTRAL", "NEU"]:
-            color_hex = self.colors.get("NEU", "#fbeab5")  # Default to yellow
+            color_hex = self.colors.get("NEU", "#f0e8d2")  # Default to yellow
         else:
             color_hex = "#d3d3d3"  # LightGray
         return self.hex_to_rgba(color_hex, score)

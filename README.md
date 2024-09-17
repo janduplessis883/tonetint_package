@@ -3,7 +3,9 @@
 [![PyPI version](https://badge.fury.io/py/ToneTint.svg)](https://badge.fury.io/py/ToneTint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**ToneTint** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
+> **ToneTint** is a Python package that provides an intuitive way to perform sentiment analysis on text data and visualize the results. It splits the input text into manageable chunks, analyzes each chunk using a pre-trained sentiment analysis model, and highlights the text with background colors corresponding to the sentiment. Additionally, it displays tooltips with detailed sentiment scores when hovering over each text chunk.
+
+![images](images/text.png)
 
 ## Table of Contents
 
@@ -46,7 +48,7 @@ python setup.py install
 ### Basic Example
 
 ```python
-from tonetint import ToneTint
+from tonetint.sentiment_visualizer import ToneTint
 
 # Initialize the visualizer
 visualizer = ToneTint()
@@ -74,9 +76,9 @@ You can specify custom colors for positive, negative, and neutral sentiments by 
 
 ```python
 custom_colors = {
-    'POS': '#558968',  # Your custom green color
-    'NEG': '#aa485b',  # Your custom red color
-    'NEU': '#fbeab5'   # Your custom yellow color
+        "POS": "#aec867",  # Green
+        "NEG": "#e8a56c",  # Red
+        "NEU": "#f0e8d2",  # Yellow
 }
 
 visualizer = ToneTint(colors=custom_colors)
