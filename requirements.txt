@@ -1,0 +1,10 @@
+# Machine Learning
+tensorflow-macos==2.10.0; sys_platform == 'darwin' and 'ARM' in platform_version
+tensorflow==2.10.0; sys_platform == 'darwin' and 'ARM' not in platform_version
+tensorflow==2.10.0; sys_platform != 'darwin'
+mlflow==2.1.1
+
+pandas
+seaborn
+transformers
+nltk
