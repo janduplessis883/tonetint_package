@@ -2,6 +2,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from transformers import pipeline
 from IPython.display import HTML, display
+import streamlit as st
 
 
 class ToneTint:
@@ -96,3 +97,10 @@ class ToneTint:
         """
         html_output = self.visualize(text)
         display(HTML(html_output))
+
+    def display_streamlit(self, text):
+        """
+        Display the HTML output in a Jupyter notebook or Streamlit app.
+        """
+        html_output = self.visualize(text)
+        st.markdown(html_output, unsafe_allow_html=True)  # Display the HTML content

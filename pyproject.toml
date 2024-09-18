@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tonetint"
-version = "0.0.6"
+version = "0.0.9"
 authors = [
   { name = "Jan du Plessis", email = "drjanduplessis@icloud.com" },
 ]
@@ -22,6 +22,7 @@ dependencies = [
   "ipython",
   "torch",
   "sentencepiece",
+  "streamlit",
 ]
 
 [project.urls]
