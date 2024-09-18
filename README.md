@@ -69,7 +69,7 @@ visualizer = ToneTint()
 # Your input text
 text = "I love sunny days. However, I hate the rain. The weather today is okay."
 
-# Display the sentiment visualization in Jupyter Notebook
+# Display the sentiment visualization in a Streamlit app
 visualizer.display_streamlit(text)
 ```
 This code will display your text with:
