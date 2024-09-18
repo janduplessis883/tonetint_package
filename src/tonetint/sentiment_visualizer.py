@@ -147,13 +147,14 @@ class ToneTint:
         html_output = self.visualize(text)
         display(HTML(html_output))
 
-    def display_streamlit(self, text):
-        """
-        Displays the generated HTML in a Streamlit app.
 
-        Args:
-            text (str): The input text to be analyzed and visualized.
-        """
-        html_output = self.visualize(text)
-        # Use st.markdown with unsafe_allow_html=True to render custom HTML
-        st.markdown(html_output, unsafe_allow_html=True)
+def display_streamlit(self, text):
+    """
+    Displays the generated HTML in a Streamlit app.
+
+    Args:
+        text (str): The input text to be analyzed and visualized.
+    """
+    html_output = self.visualize(text)
+    # Use st.markdown with unsafe_allow_html=True to render custom HTML
+    st.markdown(html_output, unsafe_allow_html=True)
