@@ -45,7 +45,7 @@ python setup.py install
 
 ## Usage
 
-### Basic Example
+### Basic Example - Jupyter Notebook
 
 ```python
 from tonetint.sentiment_visualizer import ToneTint
@@ -56,10 +56,22 @@ visualizer = ToneTint()
 # Your input text
 text = "I love sunny days. However, I hate the rain. The weather today is okay."
 
-# Display the sentiment visualization
-visualizer.display(text)
+# Display the sentiment visualization in Jupyter Notebook
+visualizer.display_notebook(text)
 ```
+### Basic Example - Stremlit App
+```python
+from tonetint.sentiment_visualizer import ToneTint
 
+# Initialize the visualizer
+visualizer = ToneTint()
+
+# Your input text
+text = "I love sunny days. However, I hate the rain. The weather today is okay."
+
+# Display the sentiment visualization in Jupyter Notebook
+visualizer.display_streamlit(text)
+```
 This code will display your text with:
 
 - **Positive sentiments** highlighted in green.
@@ -72,7 +84,7 @@ Hovering over each text chunk will show a tooltip with the sentiment label and c
 
 **Customizing Highlight Colors**
 
-You can specify custom colors for positive, negative, and neutral sentiments by passing a dictionary to the `ToneTint` constructor:
+You can specify custom `colors` for positive, negative, and neutral sentiments by passing a dictionary to the `ToneTint` constructor:
 
 ```python
 custom_colors = {
@@ -94,7 +106,9 @@ visualizer = ToneTint(chunk_size=10)
 
 **Using a Different Model**
 
-You can specify a different pre-trained model for sentiment analysis:
+By default **ToneTint** uses `nlptown/bert-base-multilingual-uncased-sentiment` from [Huggingface.co](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) The model performs well on most sentiment analysis tasks.
+
+You can specify a different pre-trained model, more suited to your sentiment analysis usecase:
 
 ```python
 visualizer = ToneTint(model_name='nlptown/bert-base-multilingual-uncased-sentiment')
