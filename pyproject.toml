@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tonetint"
-version = "0.0.9"
+version = "0.0.11"
 authors = [
   { name = "Jan du Plessis", email = "drjanduplessis@icloud.com" },
 ]
