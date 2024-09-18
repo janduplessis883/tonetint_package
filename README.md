@@ -111,7 +111,7 @@ By default **ToneTint** uses `nlptown/bert-base-multilingual-uncased-sentiment` 
 You can specify a different pre-trained model, more suited to your sentiment analysis usecase:
 
 ```python
-visualizer = ToneTint(model_name='nlptown/bert-base-multilingual-uncased-sentiment')
+visualizer = ToneTint(model_name='distilbert/distilbert-base-uncased-finetuned-sst-2-english')
 ```
 
 ## Dependencies
