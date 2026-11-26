@@ -148,3 +148,76 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Disclaimer**: This package uses pre-trained models from Hugging Face's Transformers library. The performance and accuracy of sentiment analysis depend on the chosen model. Always verify the outputs, especially when used for critical applications.
+
+---
+## Release Notes for ToneTint v0.0.15
+
+We are excited to announce the release of **ToneTint v0.0.15**, which includes new features to improve the customization and usability of text sentiment analysis output. This update introduces the ability to customize font settings and enhances the terminal output experience, providing better interactivity and visual feedback. Below is a comprehensive breakdown of the new features and updates included in this release.
+
+### New Features
+
+#### 1. **Font and Font Size Customization for HTML Output**
+In this release, we have introduced two new parameters, `font` and `font_size`, allowing users to define custom fonts and font sizes for the generated HTML output. This provides greater flexibility in how the sentiment analysis results are displayed.
+
+- **Font**: The default is set to `"Arial"`. This can be changed to any desired font by passing a different font name when initializing the `ToneTint` class.
+- **Font Size**: The default size is `"14px"`. You can customize this value to match your preferred text size.
+
+**Usage Example:**
+```python
+# Initialize the ToneTint class with custom font and font size
+tone_tint = ToneTint(font="Helvetica", font_size="16px")
+```
+
+**Impact:**
+- Custom fonts and font sizes are applied to the text chunks displayed in the generated HTML file, allowing better control over the visual presentation of sentiment analysis results.
+
+### Updates
+
+#### 2. **Enhanced `display_terminal` Function**
+The `display_terminal` function has been updated to provide a more polished and interactive output experience. In addition to displaying sentiment-colored text directly in the terminal, the function now generates a more refined HTML report that is automatically saved to the user's `Downloads` folder.
+
+Key improvements include:
+
+- **HTML Report Generation**:
+  - The function now writes the sentiment analysis results to an HTML file (`tonetint_output.html`) located in the user's `Downloads` folder.
+  - The HTML report includes a **centered container** that takes up 50% of the page width, making the output look clean and professional.
+  - A new **heading** (`<h1>`) titled "ToneTint Output:" is included at the top of the report for clear identification.
+
+- **Automatic File Opening**: After generating the HTML file, the `display_terminal` function will automatically open the file in the user's default web browser, providing instant access to the full sentiment analysis output.
+
+- **Terminal Link**: The terminal now prints the path to the generated HTML file, allowing the user to manually open it if desired.
+
+**Usage Example:**
+```python
+# Analyze text and generate a terminal output with an HTML report
+tone_tint.display_terminal("This is a test sentence for sentiment analysis.")
+```
+
+**Sample Output in Terminal**:
+```
+This is a test sentence for sentiment analysis.
+The full analysis has been saved to: /path/to/Downloads/tonetint_output.html
+Opening the file in your default browser...
+```
+
+### Bug Fixes
+
+- **Minor Performance Enhancements**: Optimized the chunk splitting and HTML generation processes to handle larger texts more efficiently.
+- **Robust Path Handling**: Ensured cross-platform compatibility for saving files to the `Downloads` folder, making the function reliable on both Windows and macOS/Linux.
+
+---
+
+### Summary of Changes:
+- **New**: `font` and `font_size` parameters for HTML output customization.
+- **Updated**: `display_terminal` function now generates an interactive, visually refined HTML report and opens it automatically in the user's browser.
+- **Bug Fixes**: Improved performance and cross-platform file handling.
+
+### How to Upgrade
+To upgrade to the latest version of ToneTint, run the following command:
+```bash
+pip install --upgrade tonetint
+```
+
+We hope these updates enhance your experience with ToneTint. As always, feedback and contributions are welcome. Feel free to open issues or submit pull requests on [GitHub](https://github.com/your-repo/tonetint).
+
+Thank you for using ToneTint!

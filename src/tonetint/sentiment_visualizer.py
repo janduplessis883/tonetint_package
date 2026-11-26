@@ -6,6 +6,10 @@ import streamlit as st
 from colorama import Fore, Style, init
 import os
 import webbrowser
+import warnings
+
+# Ignore all warnings
+warnings.filterwarnings("ignore")
 
 # Initialize colorama
 init(autoreset=True)
@@ -272,6 +276,7 @@ class ToneTint:
 
         # Automatically open the HTML file in the default web browser
         webbrowser.open(f"file://{file_path}")
+
 
     def get_terminal_color(self, label):
         """
